@@ -1,7 +1,7 @@
 import NavBar from "../components/NavBar"; // Importa el componente NavBar desde la ruta especificada
 import { useFetch } from "../useFetch"; // Importa las funciones useFetch y useDelete desde el archivo useFetch.js
 
-const MainPage = () => {
+const Docentes = () => {
   // Define el componente MainPage como una función de flecha
   const { data, error, loading } = useFetch(
     // Utiliza la función useFetch para obtener datos de la URL especificada
@@ -50,4 +50,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage; // Exporta el componente MainPage como el componente predeterminado de este archivo
+export default Docentes; // Exporta el componente MainPage como el componente predeterminado de este archivo

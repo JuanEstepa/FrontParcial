@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "Ver platos", href: "/" },
-  { name: "Agregar Plato", href: "/Add" },
-  { name: "Editar plato", href: "/Edit" },
+  { name: "Estudiantes", href: "/" },
+  { name: "Docentes", href: "/teachers" },
+  { name: "Practicas", href: "/Practices" },
 ];
 
 const NavBar = ({ page }) => {
