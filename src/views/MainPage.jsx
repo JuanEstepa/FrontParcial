@@ -16,34 +16,34 @@ const MainPage = () => {
       {loading && <h1>Loading</h1>}
       <div className="container mx-auto p-4">
         <div className="flex flex-wrap justify-center gap-4">
-          {data && // Verifica si hay datos antes de realizar el mapeo
+          {data != null && data.length > 0 ? ( // Verifica si hay datos antes de realizar el mapeo
             data.map(
               (
-                dish // Mapea los datos y renderiza un div para cada plato
+                student // Mapea los datos y renderiza un div para cada plato
               ) => (
                 <div
-                  key={dish.id} // Asigna la clave única del plato como el ID del plato
+                  key={student.id} // Asigna la clave única del plato como el ID del plato
                   className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" // Renderiza un div con clases de tailwindcss para estilizar el plato
                 >
                   <div className="p-5">
                     <p className="mb-3 font-bold text-gray-900 dark:text-white">
-                      # {dish.id}
+                      # {student.id}
                     </p>
                     <a href="#">
                       <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        {dish.name}
-                      </h5>
-                      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        {dish.lastName}
+                        {student.name} {student.lastName}
                       </h5>
                     </a>
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                      {dish.gender ? "Hombre" : "Mujer"}
+                      {student.gender ? "Hombre" : "Mujer"}
                     </p>
                   </div>
                 </div>
               )
-            )}
+            )
+          ) : (
+            <h1 className="text-white">No hay estudiantes inscritos</h1>
+          )}
         </div>
       </div>
     </>
